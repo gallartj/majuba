@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ma·ju·ba</title>
+  <!-- Link CSS using thymeleaf -->
+    <link rel="stylesheet" th:href="@{/disponibilidad.css}" />
+  <!-- Link CSS -->
+  <!-- <link rel="stylesheet" href="../static/disponibilidad.css" />
+   Icons  -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <nav class="topnav">
+    <h2 class="logo">ma·ju·ba</h2>
+  </nav>
+  <main class="main-container">
+    <div class="container">
+      <h1 class="tables">HAY <span class="number-tables" th:text="${num_tables}"></span> MESAS DISPONIBLES</h1>
+      <div class="options-availability">
+        <div class="option-availability">
+          <i class="fas fa-sign-in-alt"></i>
+          <a th:href="@{/mesa}">Ingresar</a>
+        </div>
+        <div class="option-availability"> <!-- es availability breo -->
+          <i class="fas fa-sign-out-alt"></i>
+          <a th:href="@{/guest}" class="return">Volver</button>
+        </div>
+        
+        </form>
+      </div>
+    </div>
+  </main>
+  
+</body>
+</html>
